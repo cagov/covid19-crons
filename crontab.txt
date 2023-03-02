@@ -12,4 +12,4 @@ MAILTO=jim.bumgardner@innovation.ca.gov
 10 8 * * 1 TZ=America/Los_Angeles /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpactPreview
 
 # TEST (Thursday)
-0 12-14 * * 4 TZ=America/Los_Angeles /home/ubuntu/Development/covid19-crons/run_cron.sh CovidVariantsDataPreview
+10,30 12-17 * * 4 TZ=America/Los_Angeles /home/ubuntu/Development/covid19-crons/run_cron.sh CovidVariantsDataPreview
