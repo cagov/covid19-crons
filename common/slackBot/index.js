@@ -112,7 +112,7 @@ const slackBotReactionAdd = async (channel,timestamp,name) => {
   return fetchRetry(slackApiReaction,slackApiPost(payload));
 };
 
-const slackBotDelayedChatPost = async (channel,text,post_at) => {
+const slackBotDelayedChatPost = async (channel,text, post_at) => {
   const payload = {
     channel,
     text,

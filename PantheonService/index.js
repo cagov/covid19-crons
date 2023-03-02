@@ -38,7 +38,6 @@ const masterbranch='master',
 const mergetargets = [masterbranch,stagingbranch];
 const appName = 'PantheonService';
 const githubSyncFolder = 'pages/wordpress-posts'; //no slash at the end
-// const wordPressUrl = 'https://as-go-covid19-d-001.azurewebsites.net';
 // const wordPressUrl = 'https://test-covid19-ca-gov.pantheonsite.io';
 const wordPressUrl = 'https://live-covid19-ca-gov.pantheonsite.io';
 const wordPressApiUrl = `${wordPressUrl}/wp-json/wp/v2/`;
