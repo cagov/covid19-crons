@@ -1,0 +1,15 @@
+# crontab.txt
+
+MAILTO=jim.bumgardner@innovation.ca.gov
+
+# daily puzzle update (with some retries)
+# 00      02      *       *       *    /home/ubuntu/Development/covid19-crons/run_cron.sh CovidTestTrigger
+# run CovidVariantsDataPreview from 1-3pm on Wednesdays
+0 12-14 * * 3 TZ=America/Los_Angeles /home/ubuntu/Development/covid19-crons/run_cron.sh CovidVariantsDataPreview
+# run CovidPostvaxDataPreviewNoboost at 8,10,12,14 on Wednesdays
+0 8,10,12,14 * * 3 TZ=America/Los_Angeles /home/ubuntu/Development/covid19-crons/run_cron.sh CovidPostvaxDataPreviewNoboost
+# run CovidEquityImpactPreview at 8:10 on Monday
+10 8 * * 1 TZ=America/Los_Angeles /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpactPreview
+
+# TEST (Thursday)
+0 12-14 * * 4 TZ=America/Los_Angeles /home/ubuntu/Development/covid19-crons/run_cron.sh CovidVariantsDataPreview
