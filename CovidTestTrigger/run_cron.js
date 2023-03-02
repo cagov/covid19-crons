@@ -4,7 +4,7 @@ Object.keys(Values).forEach(x => (process.env[x] = Values[x])); //Load local set
 
 process.env.debug = false; //set to false or remove to run like the real instance
 
-const context = { executionContext: { functionName: "debug" }, 
+const context = { executionContext: { functionName: "CovidTestTrigger" }, 
                   done: function() { console.log("Done function called"); } };
 
 //run the indexpage async
