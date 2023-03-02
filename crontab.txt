@@ -5,11 +5,11 @@ MAILTO=ubuntu@covid19-utility-server
 # daily puzzle update (with some retries)
 # 00      02      *       *       *    /home/ubuntu/Development/covid19-crons/run_cron.sh CovidTestTrigger
 # run CovidVariantsDataPreview from 12-2pm on Wednesdays
-0 12-14 * * 3 TZ=America/Los_Angeles /home/ubuntu/Development/covid19-crons/run_cron.sh CovidVariantsDataPreview
+0 20-22 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidVariantsDataPreview
 # run CovidPostvaxDataPreviewNoboost at 8,10,12,14 on Wednesdays
-0 8,10,12,14 * * 3 TZ=America/Los_Angeles /home/ubuntu/Development/covid19-crons/run_cron.sh CovidPostvaxDataPreviewNoboost
+0 16,18,20,22 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidPostvaxDataPreviewNoboost
 # run CovidEquityImpactPreview at 8:10 on Monday
-10 8 * * 1 TZ=America/Los_Angeles /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpactPreview
+10 16 * * 1 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpactPreview
 
 # TEST (Thursday)
-10,30 12-17 * * 4 TZ=America/Los_Angeles /home/ubuntu/Development/covid19-crons/run_cron.sh CovidVariantsDataPreview
+10,30 20-23 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidVariantsDataPreview
