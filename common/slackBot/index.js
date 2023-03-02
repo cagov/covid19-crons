@@ -70,7 +70,8 @@ const slackBotChatPost = async (channel,text,attachments) => {
   const payload = {
     channel,
     text,
-    attachments
+    attachments,
+    'icon_emoji':':bear_covid_logo:'
   };
   return fetchRetry(slackApiChatPost,slackApiPost(payload));
 };
@@ -86,7 +87,8 @@ const slackBotReplyPost = async (channel,thread_ts,text,attachments) => {
     channel,
     text,
     thread_ts,
-    attachments
+    attachments,
+    'icon_emoji':':bear_covid_logo:'
   };
 
   return fetchRetry(slackApiChatPost,slackApiPost(payload));
