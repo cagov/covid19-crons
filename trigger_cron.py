@@ -14,6 +14,7 @@ job_list = {
     'covidtesttrigger':                 { 'dir': './CovidTestTrigger',    },
     'covidvariantsdatapreview':         { 'dir': './CovidVariantsDataPreview',    },
     'covidpostvaxdatapreviewnoboost':   { 'dir': './CovidPostvaxDataPreviewNoboost',    },
+    'covidequityimpactpreview':         { 'dir': './CovidEquityImpactPreview',    },
 }
 
 if args.command.lower() not in job_list:
