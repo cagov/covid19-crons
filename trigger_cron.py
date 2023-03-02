@@ -11,8 +11,9 @@ args = parser.parse_args()
 default_run_command = 'node <JOBDIR>/run_cron.js';
 
 job_list = {
-    'covidtesttrigger': {        'dir': './CovidTestTrigger',    },
-    'covidvariantsdatapreview': {        'dir': './CovidVariantsDataPreview',    }
+    'covidtesttrigger':                 { 'dir': './CovidTestTrigger',    },
+    'covidvariantsdatapreview':         { 'dir': './CovidVariantsDataPreview',    },
+    'covidpostvaxdatapreviewnoboost':   { 'dir': './CovidPostvaxDataPreviewNoboost',    },
 }
 
 if args.command.lower() not in job_list:
