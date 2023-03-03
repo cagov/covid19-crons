@@ -21,8 +21,15 @@ MAILTO=ubuntu@covid19-utility-server
 # run CovidStateDashboardTablesTests at 7:30a on Thursday
 30 15 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTests
 
-# run the CovidAutoBuilder at 9:25a, 9:55a on Thursday
+# run CovidPostvaxDataNoboost at 7:45a on Thursday
+45 15 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidPostvaxDataNoboost
+
+# run CovidEquityImpact at 8:05 on Thursday
+05 16 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpact
+
+# run CovidAutoBuilder at 9:25a, 9:55a on Thursday
 25,55 17 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidAutoBuilder
+
 
 # TEST (Thursday)
 # 10,30 20-23 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidVariantsDataPreview

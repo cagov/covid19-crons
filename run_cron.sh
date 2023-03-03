@@ -2,14 +2,20 @@
 cd "$(dirname "$0")"
 
 declare -A SCRIPTS=(
-  ["CovidVariantsDataPreview"]="CovidVariantsDataPreview/run_cron.js"
-  ["CovidPostvaxDataPreviewNoboost"]="CovidPostvaxDataPreviewNoboost/run_cron.js"
-  ["CovidEquityImpactPreview"]="CovidEquityImpactPreview/run_cron.js"
-  ["CovidTestTrigger"]="CovidTestTrigger/run_cron.js"
-  ["CovidTranslationPrApproval"]="CovidTranslationPrApproval/run_cron.js"
-  ["CovidStateDashboardTablesTests"]="CovidStateDashboardTablesTests/run_cron.js"
-  ["CovidEquityData"]="CovidEquityData/run_cron.js"
   ["CovidAutoBuilder"]="CovidAutoBuilder/run_cron.js"
+  ["CovidEquityData"]="CovidEquityData/run_cron.js"
+  ["CovidEquityImpact"]="CovidEquityImpact/run_cron.js"
+  ["CovidEquityImpactPreview"]="CovidEquityImpactPreview/run_cron.js"
+  ["CovidPostvaxDataNoboost"]="CovidPostvaxDataNoboost/run_cron.js"
+  ["CovidPostvaxDataPreviewNoboost"]="CovidPostvaxDataPreviewNoboost/run_cron.js"
+  # you are here
+  ["CovidStateDashboardTablesTests"]="CovidStateDashboardTablesTests/run_cron.js"
+
+  ["CovidTestTrigger"]="CovidTestTrigger/run_cron.js"
+
+  ["CovidTranslationPrApproval"]="CovidTranslationPrApproval/run_cron.js"
+
+  ["CovidVariantsDataPreview"]="CovidVariantsDataPreview/run_cron.js"
 )
 
 
