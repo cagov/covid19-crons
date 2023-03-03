@@ -1,4 +1,10 @@
-#!/usr/bin/bash
+#!/bin/bash
+
+if [[ $# -lt 1 ]]; then
+  echo "Usage: $0 <job> [debug]"
+  exit 1
+fi
+
 cd "$(dirname "$0")"
 
 declare -A SCRIPTS=(
@@ -23,7 +29,11 @@ declare -A SCRIPTS=(
 
 if [ -n "${SCRIPTS[$1]}" ]; then
   echo `date` Running Cron $1 >>logs/cron_$1.txt
-  node "${SCRIPTS[$1]}" >>logs/cron_$1.txt
+  cmd = "node ${SCRIPTS[$1]}"
+  if [ -n "$2" ]; then
+    cmd+= " -d"
+  fi
+  $cmd >>logs/cron_$1.txt
   echo `date` End of run for Cron $1 >>logs/cron_$1.txt
   echo >>logs/cron_$1.txt
 else
