@@ -77,6 +77,8 @@ const doAutoApprover = async () => {
     // @ts-ignore
     const gitIssues = await gitModule.getIssues(githubUser, githubRepo);
 
+    console.log("TIME ZONE" + dataTimeZone);
+
     moment.tz.setDefault(dataTimeZone); //So important when using Moment.JS
 
 
