@@ -8,14 +8,16 @@ declare -A SCRIPTS=(
   ["CovidEquityImpactPreview"]="CovidEquityImpactPreview/run_cron.js"
   ["CovidPostvaxDataNoboost"]="CovidPostvaxDataNoboost/run_cron.js"
   ["CovidPostvaxDataPreviewNoboost"]="CovidPostvaxDataPreviewNoboost/run_cron.js"
-  # you are here
+  ["CovidStateDashboardSummary"]="CovidStateDashboardSummary/run_cron.js"
+  ["CovidStateDashboardTablesCasesDeaths"]="CovidStateDashboardTablesCasesDeaths/run_cron.js"
+  ["CovidStateDashboardTablesHospitals"]="CovidStateDashboardTablesHospitals/run_cron.js"
   ["CovidStateDashboardTablesTests"]="CovidStateDashboardTablesTests/run_cron.js"
-
+  ["CovidStateDashboardVaccines"]="CovidStateDashboardVaccines/run_cron.js"
   ["CovidTestTrigger"]="CovidTestTrigger/run_cron.js"
-
   ["CovidTranslationPrApproval"]="CovidTranslationPrApproval/run_cron.js"
-
+  ["CovidVariantsData"]="CovidVariantsData/run_cron.js"
   ["CovidVariantsDataPreview"]="CovidVariantsDataPreview/run_cron.js"
+  # PantheonService - needs a trigger (lambda?)
 )
 
 
