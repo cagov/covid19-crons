@@ -1,18 +1,28 @@
 # crontab.txt
 
+# this is local only email
 MAILTO=ubuntu@covid19-utility-server
 
-# daily puzzle update (with some retries)
-# 00      02      *       *       *    /home/ubuntu/Development/covid19-crons/run_cron.sh CovidTestTrigger
 # run CovidTranslationPrApproval every 5 mins
 0,5,10,15,20,25,30,35,40,45,50,55 * * * * /home/ubuntu/Development/covid19-crons/run_cron.sh CovidTranslationPrApproval
 
 # run CovidVariantsDataPreview from 12-2pm on Wednesdays
 0 20-22 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidVariantsDataPreview
+
 # run CovidPostvaxDataPreviewNoboost at 8,10,12,14 on Wednesdays
 0 16,18,20,22 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidPostvaxDataPreviewNoboost
-# run CovidEquityImpactPreview at 8:10 on Monday
+
+# run CovidEquityData at 8:00am on Monday
+0 16 * * 1 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityData
+
+# run CovidEquityImpactPreview at 8:10am on Monday
 10 16 * * 1 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpactPreview
 
+# run CovidStateDashboardTablesTests at 7:30a on Thursday
+30 15 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTests
+
+# run the CovidAutoBuilder at 9:25a, 9:55a on Thursday
+25,55 17 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidAutoBuilder
+
 # TEST (Thursday)
-10,30 20-23 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidVariantsDataPreview
+# 10,30 20-23 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidVariantsDataPreview

@@ -7,7 +7,11 @@ declare -A SCRIPTS=(
   ["CovidEquityImpactPreview"]="CovidEquityImpactPreview/run_cron.js"
   ["CovidTestTrigger"]="CovidTestTrigger/run_cron.js"
   ["CovidTranslationPrApproval"]="CovidTranslationPrApproval/run_cron.js"
+  ["CovidStateDashboardTablesTests"]="CovidStateDashboardTablesTests/run_cron.js"
+  ["CovidEquityData"]="CovidEquityData/run_cron.js"
+  ["CovidAutoBuilder"]="CovidAutoBuilder/run_cron.js"
 )
+
 
 if [ -n "${SCRIPTS[$1]}" ]; then
   echo `date` Running Cron $1 >>logs/cron_$1.txt
