@@ -9,10 +9,10 @@ declare -A SCRIPTS=(
 )
 
 if [ -n "${SCRIPTS[$1]}" ]; then
-  echo `date` Running Cron $1 >>cron_log.txt
-  node "${SCRIPTS[$1]}" >>cron_log.txt
-  echo `date` End of run for Cron $1 >>cron_log.txt
-  echo >>cron_log.txt
+  echo `date` Running Cron $1 >>logs/cron_$1.txt
+  node "${SCRIPTS[$1]}" >>logs/cron_$1.txt
+  echo `date` End of run for Cron $1 >>logs/cron_$1.txt
+  echo >>logs/cron_$1.txt
 else
   echo "Invalid argument. Usage: $0 [$(IFS='|'; echo "${!SCRIPTS[*]}")]"
   exit 1
