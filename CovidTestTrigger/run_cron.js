@@ -4,6 +4,10 @@ Object.keys(Values).forEach(x => (process.env[x] = Values[x])); //Load local set
 
 process.env.debug = false; //set to false or remove to run like the real instance
 
+const path = require('path');
+const parentDir = path.basename(path.dirname(__filename));
+console.log("PARENT: " + parentDir);
+
 const context = { executionContext: { functionName: "CovidTestTrigger" }, 
                   done: function() { console.log("Done function called"); } };
 
