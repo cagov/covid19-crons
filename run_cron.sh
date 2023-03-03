@@ -25,17 +25,19 @@ declare -A SCRIPTS=(
   ["CovidVariantsDataPreview"]="CovidVariantsDataPreview/run_cron.js"
   # PantheonService - needs a trigger (lambda?)
 )
-
-
+logfile="logs/cron_$1.txt"
+if [ -n "$2" ]; then
+  logfile="logs/cron_debug.txt"
+fi
 if [ -n "${SCRIPTS[$1]}" ]; then
-  echo `date` Running Cron $1 >>logs/cron_$1.txt
+  echo `date` Running Cron $1 >>$logfile
   cmd="node ${SCRIPTS[$1]}"
   if [ -n "$2" ]; then
     cmd+=" --debug"
   fi
-  $cmd >>logs/cron_$1.txt
-  echo `date` End of run for Cron $1 >>logs/cron_$1.txt
-  echo >>logs/cron_$1.txt
+  $cmd >>$logfile
+  echo `date` End of run for Cron $1 >>$logfile
+  echo >>$logfile
 else
   echo "Invalid argument. Usage: $0 [$(IFS='|'; echo "${!SCRIPTS[*]}")]"
   exit 1
