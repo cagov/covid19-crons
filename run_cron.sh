@@ -25,11 +25,14 @@ declare -A SCRIPTS=(
   ["CovidVariantsDataPreview"]="CovidVariantsDataPreview/run_cron.js"
   # PantheonService - needs a trigger (lambda?)
 )
+# normally, stdout goes to an individual log file for each cron (e.g. logs/cron_CovidAutoBuilder.txt)
 logfile="logs/cron_$1.txt"
 if [ -n "$2" ]; then
+  # but when debugging is used, all output goes to the same cron_debug.txt file, which makes it easier to debug several crons via tail -f
   logfile="logs/cron_debug.txt"
 fi
 if [ -n "${SCRIPTS[$1]}" ]; then
+  # all runs are preceded and tailed by a timestamp
   echo `date` Running Cron $1 >>$logfile
   cmd="node ${SCRIPTS[$1]}"
   if [ -n "$2" ]; then
