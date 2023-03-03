@@ -6,6 +6,7 @@ declare -A SCRIPTS=(
   ["CovidPostvaxDataPreviewNoboost"]="CovidPostvaxDataPreviewNoboost/run_cron.js"
   ["CovidEquityImpactPreview"]="CovidEquityImpactPreview/run_cron.js"
   ["CovidTestTrigger"]="CovidTestTrigger/run_cron.js"
+  ["CovidTranslationPrApproval"]="CovidTranslationPrApproval/run_cron.js"
 )
 
 if [ -n "${SCRIPTS[$1]}" ]; then

@@ -4,6 +4,9 @@ MAILTO=ubuntu@covid19-utility-server
 
 # daily puzzle update (with some retries)
 # 00      02      *       *       *    /home/ubuntu/Development/covid19-crons/run_cron.sh CovidTestTrigger
+# run CovidTranslationPrApproval every 5 mins
+0/5 * * * * /home/ubuntu/Development/covid19-crons/run_cron.sh CovidTranslationPrApproval
+
 # run CovidVariantsDataPreview from 12-2pm on Wednesdays
 0 20-22 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidVariantsDataPreview
 # run CovidPostvaxDataPreviewNoboost at 8,10,12,14 on Wednesdays
