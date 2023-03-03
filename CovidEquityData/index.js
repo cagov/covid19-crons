@@ -20,17 +20,17 @@ module.exports = async function (context, myTimer) {
       await slackBotReactionAdd(debugChannel, slackPostTS, 'zzz');
     } else {
 
-      const Pr = await doCovidEquityData();
+        const Pr = await doCovidEquityData();
 
-      if(Pr) {
-        await slackBotReactionAdd(debugChannel, slackPostTS, 'package');
-        await slackBotReplyPost(debugChannel, slackPostTS, Pr.html_url);
+        if(Pr) {
+          await slackBotReactionAdd(debugChannel, slackPostTS, 'package');
+          await slackBotReplyPost(debugChannel, slackPostTS, Pr.html_url);
 
-        //Delay post to main channel to allow for build time.
-        const postTime = (new Date().getTime() + 1000 * 300) / 1000;
-        await slackBotDelayedChatPost(notifyChannel,`Equity stats Update ready for review in https://staging.covid19.ca.gov/equity/ approve the PR here: \n${Pr.html_url}`, postTime);
-    
-      }
+          //Delay post to main channel to allow for build time.
+          const postTime = (new Date().getTime() + 1000 * 300) / 1000;
+          await slackBotDelayedChatPost(notifyChannel,`Equity stats Update ready for review in https://staging.covid19.ca.gov/equity/ approve the PR here: \n${Pr.html_url}`, postTime);
+      
+        }
 
       await slackBotReplyPost(debugChannel, slackPostTS,`${appName} finished`);
       await slackBotReactionAdd(debugChannel, slackPostTS, 'white_check_mark');
