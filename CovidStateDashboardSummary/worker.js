@@ -7,7 +7,7 @@ const { todayDateString } = require('../common/gitTreeCommon');
 const { GitHubTreePush } = require("@cagov/github-tree-push");
 
 
-const PrLabels = ['Automatic Deployment','Add to Rollup','Publish at 9:15 a.m. ☀️'];
+const PrLabels = process.env.debug? [] : ['Automatic Deployment','Add to Rollup','Publish at 9:15 a.m. ☀️'];
 const githubOwner = 'cagov';
 const githubRepo = 'covid-static-data';
 // const gitHubCommitter = {

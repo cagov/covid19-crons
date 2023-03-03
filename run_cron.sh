@@ -31,7 +31,7 @@ if [ -n "${SCRIPTS[$1]}" ]; then
   echo `date` Running Cron $1 >>logs/cron_$1.txt
   cmd="node ${SCRIPTS[$1]}"
   if [ -n "$2" ]; then
-    cmd+=" -d"
+    cmd+=" --debug"
   fi
   $cmd >>logs/cron_$1.txt
   echo `date` End of run for Cron $1 >>logs/cron_$1.txt

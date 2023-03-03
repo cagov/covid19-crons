@@ -1,6 +1,6 @@
 const { queryDataset,getSQL } = require('../common/snowflakeQuery');
 const GitHub = require('github-api');
-const PrLabels = ['Automatic Deployment'];
+const PrLabels = process.env.debug? [] : ['Automatic Deployment'];
 const githubUser = 'cagov';
 const githubRepo = 'covid19';
 
