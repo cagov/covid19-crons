@@ -7,7 +7,7 @@ const committer = {
 };
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-const moment = require('moment'); // https://momentjs.com/docs/#/use-it/node-js/
+const moment = require('moment-timezone'); // https://momentjs.com/docs/#/use-it/node-js/
 const dataTimeZone = 'America/Los_Angeles';
 //const dataTimeZone = 'America/New_York';
 
@@ -76,8 +76,6 @@ const doAutoApprover = async () => {
     const gitRepo = await gitModule.getRepo(githubUser, githubRepo);
     // @ts-ignore
     const gitIssues = await gitModule.getIssues(githubUser, githubRepo);
-
-    console.log("TIME ZONE" + dataTimeZone);
 
     moment.tz.setDefault(dataTimeZone); //So important when using Moment.JS
 
