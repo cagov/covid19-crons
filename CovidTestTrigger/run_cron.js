@@ -6,9 +6,7 @@ process.env.debug = false; //set to false or remove to run like the real instanc
 
 const path = require('path');
 const parentDir = path.basename(path.dirname(__filename));
-console.log("PARENT: " + parentDir);
-
-const context = { executionContext: { functionName: "CovidTestTrigger" }, 
+const context = { executionContext: { functionName: parentDir }, 
                   done: function() { console.log("Done function called"); } };
 
 //run the indexpage async

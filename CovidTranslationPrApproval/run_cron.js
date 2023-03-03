@@ -4,7 +4,9 @@ Object.keys(Values).forEach(x => (process.env[x] = Values[x])); //Load local set
 
 process.env.debug = false; //set to false or remove to run like the real instance
 
-const context = { executionContext: { functionName: "CovidTranslationPrApproval" } };
+const path = require('path');
+const parentDir = path.basename(path.dirname(__filename));
+const context = { executionContext: { functionName: parentDir } };
 
 //run the indexpage async
 const indexCode = require("./index");
