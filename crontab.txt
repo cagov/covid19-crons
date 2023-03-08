@@ -49,5 +49,5 @@ MAILTO=ubuntu@covid19-utility-server
 25,55 17 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidAutoBuilder
 
 
-# TEST (Thursday)
-# 10,30 20-23 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidVariantsDataPreview
+# TEST (Wednesday)
+0/5 14,15,16 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidTestTrigger
