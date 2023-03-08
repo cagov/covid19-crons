@@ -127,8 +127,8 @@ const doCovidStateDashboardTablesCasesDeaths = async () => {
             let CONFIRMED_DEATHS_DEATH_DATE = getDateValueRows(rows_by_region, 'DEATHS')
             const pending_dateD = summary_by_region.DEATH_UNCERTAINTY_PERIOD.toISOString().split("T")[0];
             const deathsList = CONFIRMED_DEATHS_DEATH_DATE.VALUES;
-            parse_state = 0;
-            summed_days = 0;
+            let parse_state = 0;
+            let summed_days = 0;
             for (let i = 0; i < deathsList.length; ++i) {
                 if (parse_state == 0) {
                     if (deathsList[i].DATE.toISOString().split("T")[0] == pending_dateD) {
