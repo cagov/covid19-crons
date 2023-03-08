@@ -3,6 +3,8 @@
 const { slackBotChatPost, slackBotReportError, slackBotReplyPost, slackBotReactionAdd } = require('../common/slackBot');
 const slackDebugChannel = 'C02J16U50KE'; // #jim-testing
 
+const { isIdleDay, isFirstOccurrence } = require('../common/timeOffCheck');
+
 const { doSnowflakeTest } = require('./worker');
 const appName = 'CovidTestTrigger';
 const fetch = require('node-fetch');
@@ -15,25 +17,27 @@ module.exports = async function (context, req) {
         // const appName = context.executionContext.functionName;
         slackPostTS = (await (await slackBotChatPost(slackDebugChannel,`${appName} triggered`)).json()).ts;
         await slackBotReplyPost(slackDebugChannel, slackPostTS,`${appName} started`);
+        if (isIdleDay({weekends_off:true, holidays_off:true})
+            || ! isFirstOccurrence(first_day = 'Thu', after_first = 'Fri')
+        ) {
+            await slackBotReplyPost(slackDebugChannel, slackPostTS,`${appName} snoozed`);
+            await slackBotReactionAdd(slackDebugChannel, slackPostTS, 'zzz');
+        } else {
         // await slackBotReplyPost(slackDebugChannel, slackPostTS,`${appName} credential` + ' ' + process.env["SNOWFLAKE_CDTCDPH_COVID_OAUTH"]);
 
-        await fetch("https://krazydad.com/azure_ip_test")
-            .then(response => {
+          const reqBody = req.body? req.body : "";
+          if (reqBody) {
+              await slackBotReplyPost(slackDebugChannel, slackPostTS, "REQ BODY: " + JSON.stringify(reqBody));
+          }
 
-            });
+          const treeRunResults = await doSnowflakeTest(reqBody, slackPostTS);
+          if (treeRunResults) {
+              await slackBotReplyPost(slackDebugChannel, slackPostTS, treeRunResults);
+          }
 
-        const reqBody = req.body? req.body : "";
-        if (reqBody) {
-            await slackBotReplyPost(slackDebugChannel, slackPostTS, "REQ BODY: " + JSON.stringify(reqBody));
+          await slackBotReplyPost(slackDebugChannel, slackPostTS,`${appName} finished`);
+          await slackBotReactionAdd(slackDebugChannel, slackPostTS, 'white_check_mark');
         }
-
-        const treeRunResults = await doSnowflakeTest(reqBody, slackPostTS);
-        if (treeRunResults) {
-            await slackBotReplyPost(slackDebugChannel, slackPostTS, treeRunResults);
-        }
-
-        await slackBotReplyPost(slackDebugChannel, slackPostTS,`${appName} finished`);
-        await slackBotReactionAdd(slackDebugChannel, slackPostTS, 'white_check_mark');
 
     } // End Try for the entire module
     catch (e) {
