@@ -101,3 +101,13 @@ local.settings.json
 # jbum utility file
 .mcp
 attic/
+
+# daemon local files
+jbum_pushover.py
+slack_credentials.py
+slack_info.py
+daemons/demandbot/wordbase.json
+daemons/dashboarddeltas/deltabase.json
+daemons/dashboarddeltas/field_table.py
+daemons/dashboarddeltas/test_dates.csv
+daemons/publishpusher/publishpusher_config.py
