@@ -2,6 +2,7 @@
 
 const { slackBotChatPost, slackBotReportError, slackBotReplyPost, slackBotReactionAdd } = require('../common/slackBot');
 const slackDebugChannel = 'C02J16U50KE'; // #jim-testing
+// const slackDebugChannel = 'C01MEQWF668'; // #covid19-alerts
 
 const { isIdleDay, isFirstOccurrence } = require('../common/timeOffCheck');
 
@@ -15,6 +16,7 @@ module.exports = async function (context, req) {
 
     try { // The entire module
         // const appName = context.executionContext.functionName;
+        console.log("Sending Slack Messages");
         slackPostTS = (await (await slackBotChatPost(slackDebugChannel,`${appName} triggered`)).json()).ts;
         await slackBotReplyPost(slackDebugChannel, slackPostTS,`${appName} started`);
         if (isIdleDay({weekends_off:true, holidays_off:true})
@@ -38,6 +40,7 @@ module.exports = async function (context, req) {
           await slackBotReplyPost(slackDebugChannel, slackPostTS,`${appName} finished`);
           await slackBotReactionAdd(slackDebugChannel, slackPostTS, 'white_check_mark');
         }
+        console.log("Done Slack Messages");
 
     } // End Try for the entire module
     catch (e) {
