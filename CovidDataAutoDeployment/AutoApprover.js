@@ -9,7 +9,6 @@ const committer = {
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 const moment = require('moment-timezone'); // https://momentjs.com/docs/#/use-it/node-js/
 const dataTimeZone = 'America/Los_Angeles';
-//const dataTimeZone = 'America/New_York';
 
 const AutoApproverLabels = require('./AutoApproverLabels.json').data;
 const labelPublishASAP = AutoApproverLabels.specialLabels.PublishASAP;

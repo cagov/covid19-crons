@@ -3,8 +3,12 @@
 # this is local only email
 MAILTO=ubuntu@covid19-utility-server
 
-# run CovidTranslationPrApproval every 5 minutes
-0,5,10,15,20,25,30,35,40,45,50,55 * * * * /home/ubuntu/Development/covid19-crons/run_cron.sh CovidTranslationPrApproval
+# run CovidDataAutoDeployment every 5 minutes, 7-10am, Thursday
+0,5,10,15,20,25,30,35,40,45,50,55 7-10 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidDataAutoDeployment
+
+# run CovidTranslationPrApproval at 6am, 12pm, 6pm, Mon-Fri
+0 6,12,18 * * 1-5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidTranslationPrApproval
+
 
 # MONDAY
 # 8:00am on Monday
