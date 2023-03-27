@@ -3,7 +3,7 @@ const { getData_weekly_variants_data: getData_weekly_variants_data } = require('
 const { GitHubTreePush } = require("@cagov/github-tree-push");
 const nowPacTime = (/** @type {Intl.DateTimeFormatOptions} */ options) => new Date().toLocaleString("en-CA", {timeZone: "America/Los_Angeles", ...options});
 const todayDateString = () => nowPacTime({year: 'numeric',month: '2-digit',day: '2-digit'});
-const PrLabels = process.env.debug? [] : ['Automatic Deployment', 'Add to Rollup', 'Publish at 9:15 a.m. ☀️'];
+const PrLabels = process.env.debug === 'true' ? [] : ['Automatic Deployment', 'Add to Rollup', 'Publish at 9:15 a.m. ☀️'];
 const githubOwner = 'cagov';
 const githubRepo = 'covid-static-data';
 const githubPath = 'data/variants';
