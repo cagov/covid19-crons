@@ -32,7 +32,7 @@ MAILTO=ubuntu@covid19-utility-server
 10 7 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesCasesDeaths 
 
 # 7:20a on Thursday
-20 7 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesHospitals
+#20 7 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesHospitals
 
 # 7:30a on Thursday
 30 7 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTests

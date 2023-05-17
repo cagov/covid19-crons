@@ -75,20 +75,20 @@ file_list = [
             # (0.00700, 0.21746,  -0.00941, 0.02998,   -0.21198, 0.27496),
             'flags':('always_changes')
         },
-        {   'desc':'Total Hospitalizations',
-            'field':'data.hospitalizations.HOSPITALIZED_COVID_CONFIRMED_PATIENTS',
-            'date_check': 'data.hospitalizations.DATE',
-            'expected_growth_range': (-0.048780, 0.114062),
-            # (915.0, 9279.0,  -306.0, 639.0,   -0.048780, 0.114062),
-            'flags':('always_changes')
-        },
-        {   'desc':'Total ICU',
-            'field':'data.icu.ICU_COVID_CONFIRMED_PATIENTS',
-            'date_check': 'data.icu.DATE',
-            'expected_growth_range': (-0.093923, 0.181070),
-            # (219.0, 2128.0,  -143.0, 192.0,   -0.093923, 0.181070),
-            'flags':('always_changes')
-        },
+        #{   'desc':'Total Hospitalizations',
+        #    'field':'data.hospitalizations.HOSPITALIZED_COVID_CONFIRMED_PATIENTS',
+        #    'date_check': 'data.hospitalizations.DATE',
+        #    'expected_growth_range': (-0.048780, 0.114062),
+        #    # (915.0, 9279.0,  -306.0, 639.0,   -0.048780, 0.114062),
+        #    'flags':('always_changes')
+        #},
+        #{   'desc':'Total ICU',
+        #    'field':'data.icu.ICU_COVID_CONFIRMED_PATIENTS',
+        #    'date_check': 'data.icu.DATE',
+        #    'expected_growth_range': (-0.093923, 0.181070),
+        #    # (219.0, 2128.0,  -143.0, 192.0,   -0.093923, 0.181070),
+        #    'flags':('always_changes')
+        #},
         # Hospitalization Changee and ICU change is sometimes zero which produces issues
     ]
   },
