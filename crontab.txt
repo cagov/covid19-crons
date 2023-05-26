@@ -17,10 +17,6 @@ MAILTO=ubuntu@covid19-utility-server
 # 8:10am on Monday
 10 8 * * 1 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpactPreview
 
-# WEDNESDAY
-# 12-2pm on Wednesday
-0 12-14 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidVariantsDataPreview
-
 # 8am,10am,12pm,2pm o
 0 8,10,12,14 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidPostvaxDataPreviewNoboost
 
@@ -44,10 +40,7 @@ MAILTO=ubuntu@covid19-utility-server
 45 7 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardSummary
 
 # 7:55a on Thursday
-55 7 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidVariantsData
-
-# 8:05 on Thursday
-05 8 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpact
+55 7 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpact
 
 # 9:25a, 9:55a on Thursday
 25,55 9 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidAutoBuilder
