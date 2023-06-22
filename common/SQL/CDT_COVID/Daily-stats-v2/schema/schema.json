@@ -203,6 +203,14 @@
             "HOSPITALIZED_COVID_CONFIRMED_PATIENTS_LAST14DAYS":{
               "type":"integer"
             },
+            "HOSPITALIZED_COVID_CONFIRMED_PATIENTS_7_DAY_AVG":{
+              "$ref": "#/definitions/integer-zero-to-everyone"
+            },
+            "HOSPITALIZED_COVID_CONFIRMED_PATIENTS_PER_100K":{
+              "type":"number",
+              "minimum": 0,
+              "maximum": 100000
+            },
             "HOSPITALIZED_SUSPECTED_COVID_PATIENTS":{
               "type":"integer"
             },
@@ -213,6 +221,9 @@
               "type":"number"
             },
             "HOSPITALIZED_SUSPECTED_COVID_PATIENTS_LAST14DAYS":{
+              "type":"integer"
+            },
+            "POPULATION":{
               "type":"integer"
             }
           }
