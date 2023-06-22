@@ -5,6 +5,7 @@ const { todayDateString } = require('../common/gitTreeCommon');
 // const { createTreeFromFileMap, PrIfChanged, todayDateString } = require('../common/gitTreeCommon');
 // const GitHub = require('github-api');
 const { GitHubTreePush } = require("@cagov/github-tree-push");
+const stagingOnly = false;
 
 
 const PrLabels = process.env.debug === 'true' ? [] : ['Automatic Deployment','Add to Rollup','Publish at 9:15 a.m. ☀️'];
@@ -49,6 +50,10 @@ const doCovidStateDashboardSummary = async () => {
         stagingTree.syncFile(drec.path, drec.json);
     }
     await stagingTree.treePush();
+
+    if (stagingOnly) {
+        return null;
+    }
 
     const mainTree = new GitHubTreePush(gitToken, {
         owner: githubOwner,
