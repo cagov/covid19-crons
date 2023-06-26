@@ -42,7 +42,12 @@ const PrInfoList = [
     },
 ];
 
-const getDateValueRows = (dataset, valueColumnName) => {
+const getDateValueRows = (dataset, valueColumnName, epoch_min=0) => {
+    // pre-process data and filter by date
+    if (epoch_min) {
+        dataset = dataset.filter(f => f.DATE.getEpochSeconds() >= epoch_min);
+    }
+
     let DateValueRange = dataset
         .filter(m => m[valueColumnName] !== null) //0s are ok
         .map(m => m.DATE);
@@ -133,7 +138,7 @@ const doCovidStateDashboardTablesHospitals = async () => {
                             }
                         },
                         time_series: {
-                            ICU_BEDS: getDateValueRows(hospitals_and_icus_byRegion, 'ICU_AVAILABLE_BEDS')
+                            ICU_BEDS: getDateValueRows(hospitals_and_icus_byRegion, 'ICU_AVAILABLE_BEDS', 1683763200) // 2023-05-11
                         }
                     }
                 });

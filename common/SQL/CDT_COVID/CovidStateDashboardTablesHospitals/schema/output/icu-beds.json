@@ -152,8 +152,8 @@
                   "required": true,
                   "type": "array",
                   "uniqueItems": true,
-                  "minItems": 300,
-                  "maxItems": 1200,
+                  "minItems": 30,
+                  "maxItems": 400,
                   "items": {
                     "required": true,
                     "type": "object",

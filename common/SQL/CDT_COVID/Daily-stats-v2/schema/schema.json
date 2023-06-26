@@ -184,6 +184,7 @@
             "HOSPITALIZED_SUSPECTED_COVID_PATIENTS_DAILY",
             "HOSPITALIZED_SUSPECTED_COVID_PATIENTS_DAILYPCTCHG",
             "HOSPITALIZED_SUSPECTED_COVID_PATIENTS_LAST14DAYS",
+            "TOTAL_HOSPITALIZED_COVID_CONFIRMED_PATIENTS",
             "POPULATION"
           ],
           "additionalProperties": false,
@@ -222,6 +223,10 @@
             },
             "HOSPITALIZED_SUSPECTED_COVID_PATIENTS_LAST14DAYS":{
               "type":"integer"
+            },
+            "TOTAL_HOSPITALIZED_COVID_CONFIRMED_PATIENTS":{
+              "type":"integer",
+              "minimum": 0
             },
             "POPULATION":{
               "type":"integer"
