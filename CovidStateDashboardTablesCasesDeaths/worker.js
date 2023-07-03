@@ -203,6 +203,7 @@ const doCovidStateDashboardTablesCasesDeaths = async () => {
                     data: {
                         latest: {
                             CONFIRMED_DEATHS: {
+                                total_deaths: summary_by_region.total_deaths,
                                 total_confirmed_deaths: summary_by_region.total_confirmed_deaths,
                                 new_deaths: summary_by_region.new_deaths,
                                 new_deaths_delta_1_day: summary_by_region.new_deaths_delta_1_day,
