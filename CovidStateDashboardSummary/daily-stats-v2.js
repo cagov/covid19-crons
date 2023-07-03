@@ -48,6 +48,7 @@ const getData_daily_stats_v2 = async () => {
           },
           deaths : {
               DATE : row['MAX(DATE)'],
+              TOTAL_DEATHS : row['SUM(DEATHS)'],
               LATEST_TOTAL_CONFIRMED_DEATHS : row['SUM(LATEST_TOTAL_CONFIRMED_DEATHS)'],
               NEWLY_REPORTED_DEATHS : row['SUM(NEWLY_REPORTED_DEATHS)'],
               LATEST_CONFIDENT_AVG_DEATH_RATE_PER_100K_7_DAYS : row['SUM(LATEST_CONFIDENT_AVG_DEATH_RATE_PER_100K_7_DAYS)'],
