@@ -101,7 +101,6 @@
       "cases_per_100k_7_days",
       "probable_cases_per_100k_7_days",
       "combined_cases_per_100k_7_days",
-      "total_deaths",
       "total_confirmed_deaths",
       "new_deaths",
       "new_deaths_delta_1_day",
@@ -161,9 +160,6 @@
       },
       "combined_cases_per_100k_7_days": {
         "$ref": "#/definitions/number-non-neg"
-      },
-      "total_deaths": {
-        "$ref": "#/definitions/integer-zero-to-everyone"
       },
       "total_confirmed_deaths": {
         "$ref": "#/definitions/integer-zero-to-everyone"

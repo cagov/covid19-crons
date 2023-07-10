@@ -102,11 +102,6 @@
               "type": "object",
               "additionalProperties": false,
               "properties": {
-                "total_deaths": {
-                  "required": true,
-                  "type": "integer",
-                  "minimum": 0
-                },
                 "total_confirmed_deaths": {
                   "required": true,
                   "type": "integer",
