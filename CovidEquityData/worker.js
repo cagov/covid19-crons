@@ -13,7 +13,7 @@ const committer = {
   email: process.env["GITHUB_EMAIL"]
 };
 // const PrLabels = ['Automatic Deployment'];
-const PrReviewers = ['sindhuravuri','tomasleon','cmhoove14'];
+const PrReviewers = ['JamesSLogan'];
 const sqlRootPath = "../SQL/CDT_COVID/Equity/";
 const schemaPath = `${sqlRootPath}schema/`;
 
