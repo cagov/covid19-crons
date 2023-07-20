@@ -12,15 +12,12 @@ MAILTO=ubuntu@covid19-utility-server
 
 # MONDAY
 # 8:00am on Monday
-0 8 * * 1 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityData
+#0 8 * * 1 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityData
 
 # 8:10am on Monday
-10 8 * * 1 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpactPreview
+#10 8 * * 1 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpactPreview
 
 # THURSDAY
-# 7:05am on Thursday
-5 7 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh  CovidStateDashboardVaccines
-
 # 7:15a on Thursday
 10 7 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesCasesDeaths 
 
