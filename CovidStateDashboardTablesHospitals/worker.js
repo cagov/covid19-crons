@@ -13,7 +13,7 @@ const stagingBranch = 'CovidStateDashboardTables_Staging';
 const doInputValidation = false;
 const doOutputValidation = true;
 const sqlRootPath = '../SQL/CDT_COVID/CovidStateDashboardTablesHospitals/';
-const stagingOnly = false; //Set to true to only work on staging
+//const stagingOnly = false; //Set to true to only work on staging
 
 const regionList = ["California", "Alameda", "Alpine", "Amador", "Butte", "Calaveras", "Colusa", "Contra Costa", "Del Norte", "El Dorado", "Fresno", "Glenn", "Humboldt", "Imperial", "Inyo", "Kern", "Kings", "Lake", "Lassen", "Los Angeles", "Madera", "Marin", "Mariposa", "Mendocino", "Merced", "Modoc", "Mono", "Monterey", "Napa", "Nevada", "Orange", "Placer", "Plumas", "Riverside", "Sacramento", "San Benito", "San Bernardino", "San Diego", "San Francisco", "San Joaquin", "San Luis Obispo", "San Mateo", "Santa Barbara", "Santa Clara", "Santa Cruz", "Shasta", "Sierra", "Siskiyou", "Solano", "Sonoma", "Stanislaus", "Sutter", "Tehama", "Trinity", "Tulare", "Tuolumne", "Ventura", "Yolo", "Yuba"];
 
@@ -66,7 +66,7 @@ const getDateValueRows = (dataset, valueColumnName, epoch_min=0) => {
     };
 };
 
-const doCovidStateDashboardTablesHospitals = async () => {
+const doCovidStateDashboardTablesHospitals = async (stagingOnly) => {
     const token = getGitHubToken();
 
     const sqlWorkAndSchemas = getSqlWorkAndSchemas(sqlRootPath, 'schema/input/[file]/schema.json', 'schema/input/[file]/sample.json', 'schema/input/[file]/fail/', 'schema/output/');

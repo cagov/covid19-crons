@@ -1,5 +1,5 @@
 //@ts-check
-const { doCovidStateDashboardTablesTests } = require('./worker');
+const { doCovidStateDashboardTablesTests } = require('../CovidStateDashboardTablesTests/worker');
 const { isIdleDay } = require('../common/timeOffCheck');
 
 const SlackConnector = require("@cagov/slack-connector");
@@ -7,7 +7,7 @@ const slackBotName = "Covid State Dashboard Tables - Tests"
 
 //const notifyChannel = 'C01AA1ZB05B'; // #covid19-state-dash
 //const debugChannel = 'C01DBP67MSQ'; // #testingbot (renamed to #odi-engineering-bot-covid19-cron)
-const debugChannel = process.env.debug ? "C02J16U50KE" : 'C01DBP67MSQ' //#jbum-testing vs #testingbot
+const debugChannel = true || process.env.debug ? "C02J16U50KE" : 'C01DBP67MSQ' //#jbum-testing vs #testingbot
 
 const slackBotGetToken = () => {
   const token = process.env["SLACKBOT_TOKEN"];
@@ -29,13 +29,13 @@ module.exports = async function (context) {
   const slack = new SlackConnector(slackBotGetToken(), debugChannel, {username:slackBotName});
 
   try {
-    await slack.Chat(`${appName} (Every Thursday @ 7:30am)`);
+    await slack.Chat(`${appName} (Every Wednesday @ 3:30pm)`);
 
     if (isIdleDay({weekends_off:true, holidays_off:true})) {
       await slack.Reply(`${appName} snoozed (weekend or holiday)`);
       await slack.Top.ReactionAdd('zzz');
     } else {
-      const PrResults = await doCovidStateDashboardTablesTests(slack, false);
+      const PrResults = await doCovidStateDashboardTablesTests(slack, true);
 
       if(PrResults) {
         await slack.Top.ReactionAdd('package');
