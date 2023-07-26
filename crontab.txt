@@ -21,6 +21,7 @@ MAILTO=ubuntu@covid19-utility-server
 30 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTestsPreview
 35 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesHospitalsPreview
 40 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesCasesDeathsPreview
+45 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardSummaryPreview
 
 # THURSDAY
 # 7:10a on Thursday
