@@ -14,7 +14,7 @@ module.exports = async function (context, myTimer) {
       await slackBotReplyPost(debugChannel, slackPostTS,`${appName} snoozed (weekend or holiday)`);
       await slackBotReactionAdd(debugChannel, slackPostTS, 'zzz');
     } else {
-      const PrResults = await doCovidStateDashboardTablesHospitals();
+      const PrResults = await doCovidStateDashboardTablesHospitals(false);
 
       if(PrResults) {
         await slackBotReactionAdd(debugChannel, slackPostTS, 'package');

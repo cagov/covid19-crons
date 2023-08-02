@@ -5,7 +5,7 @@ const { todayDateString } = require('../common/gitTreeCommon');
 // const { createTreeFromFileMap, PrIfChanged, todayDateString } = require('../common/gitTreeCommon');
 // const GitHub = require('github-api');
 const { GitHubTreePush } = require("@cagov/github-tree-push");
-const stagingOnly = false;
+//const stagingOnly = false;
 
 
 const PrLabels = process.env.debug === 'true' ? [] : ['Automatic Deployment','Add to Rollup','Publish at 9:15 a.m. ☀️'];
@@ -24,7 +24,7 @@ const targetBranch = 'main';
  * Check to see if we need stats update PRs, make them if we do.
  * @returns The PR created if changes were made
  */
-const doCovidStateDashboardSummary = async () => {
+const doCovidStateDashboardSummary = async (stagingOnly) => {
     // const gitModule = new GitHub({ token: process.env["GITHUB_TOKEN"] });
     // const gitRepo = await gitModule.getRepo(githubUser,githubRepo);
     // const gitIssues = await gitModule.getIssues(githubUser,githubRepo);
