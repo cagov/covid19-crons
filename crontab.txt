@@ -37,7 +37,7 @@ MAILTO=ubuntu@covid19-utility-server
 45 7 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardSummary
 
 # 7:55a on Thursday
-55 7 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpact
+#55 7 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpact
 
 # 9:25a, 9:55a on Thursday
 25,55 9 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidAutoBuilder
