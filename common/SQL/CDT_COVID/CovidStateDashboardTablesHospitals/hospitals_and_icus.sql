@@ -58,7 +58,7 @@ from
         *,
         lag(ICU_AVAILABLE_BEDS, 1, 0) over (partition by REGION order by DATE) as ICU_AVAILABLE_BEDS_PREV,
         lag(ICU_PATIENTS, 1, 0) over (partition by REGION order by DATE) as ICU_PATIENTS_PREV,
-        lag(HOSPITALIZED_PATIENTS, 1, 0) over (partition by REGION order by DATE) as HOSPITALIZED_PATIENTS_PREV
+        lag(HOSPITALIZED_PATIENTS, 1, 0) over (partition by REGION order by DATE) as HOSPITALIZED_PATIENTS_PREV,
         lag(ADMITTED_PATIENTS, 1, 0) over (partition by REGION order by DATE) as ADMITTED_PATIENTS_PREV
     from
         (
