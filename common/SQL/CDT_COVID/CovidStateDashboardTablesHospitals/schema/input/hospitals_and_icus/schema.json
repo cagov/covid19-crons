@@ -88,6 +88,10 @@
       "HOSPITALIZED_PATIENTS_CHANGE",
       "HOSPITALIZED_PATIENTS_CHANGE_FACTOR",
       "HOSPITALIZED_PATIENTS_14_DAY_AVG",
+      "ADMITTED_PATIENTS",
+      "ADMITTED_PATIENTS_CHANGE",
+      "ADMITTED_PATIENTS_CHANGE_FACTOR",
+      "ADMITTED_PATIENTS_14_DAY_AVG",
       "ICU_PATIENTS",
       "ICU_PATIENTS_CHANGE",
       "ICU_PATIENTS_CHANGE_FACTOR",
@@ -117,6 +121,18 @@
         "type": "number"
       },
       "HOSPITALIZED_PATIENTS_14_DAY_AVG": {
+        "type": "number"
+      },
+      "ADMITTED_PATIENTS": {
+        "$ref": "#/definitions/integer-zero-to-everyone"
+      },
+      "ADMITTED_PATIENTS_CHANGE": {
+        "type": "integer"
+      },
+      "ADMITTED_PATIENTS_CHANGE_FACTOR": {
+        "type": "number"
+      },
+      "ADMITTED_PATIENTS_14_DAY_AVG": {
         "type": "number"
       },
       "ICU_PATIENTS": {
