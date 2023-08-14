@@ -87,14 +87,17 @@
       "HOSPITALIZED_PATIENTS",
       "HOSPITALIZED_PATIENTS_CHANGE",
       "HOSPITALIZED_PATIENTS_CHANGE_FACTOR",
+      "HOSPITALIZED_PATIENTS_7_DAY_AVG",
       "HOSPITALIZED_PATIENTS_14_DAY_AVG",
       "ADMITTED_PATIENTS",
       "ADMITTED_PATIENTS_CHANGE",
       "ADMITTED_PATIENTS_CHANGE_FACTOR",
+      "ADMITTED_PATIENTS_7_DAY_AVG",
       "ADMITTED_PATIENTS_14_DAY_AVG",
       "ICU_PATIENTS",
       "ICU_PATIENTS_CHANGE",
       "ICU_PATIENTS_CHANGE_FACTOR",
+      "ICU_PATIENTS_7_DAY_AVG",
       "ICU_PATIENTS_14_DAY_AVG",
       "ICU_AVAILABLE_BEDS",
       "ICU_AVAILABLE_BEDS_CHANGE",
@@ -120,6 +123,9 @@
       "HOSPITALIZED_PATIENTS_CHANGE_FACTOR": {
         "type": "number"
       },
+      "HOSPITALIZED_PATIENTS_7_DAY_AVG": {
+        "type": "number"
+      },
       "HOSPITALIZED_PATIENTS_14_DAY_AVG": {
         "type": "number"
       },
@@ -132,6 +138,9 @@
       "ADMITTED_PATIENTS_CHANGE_FACTOR": {
         "type": "number"
       },
+      "ADMITTED_PATIENTS_7_DAY_AVG": {
+        "type": "number"
+      },
       "ADMITTED_PATIENTS_14_DAY_AVG": {
         "type": "number"
       },
@@ -142,6 +151,9 @@
         "type": "integer"
       },
       "ICU_PATIENTS_CHANGE_FACTOR": {
+        "type": "number"
+      },
+      "ICU_PATIENTS_7_DAY_AVG": {
         "type": "number"
       },
       "ICU_PATIENTS_14_DAY_AVG": {
