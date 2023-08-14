@@ -127,7 +127,7 @@ const doCovidStateDashboardTablesHospitals = async (stagingOnly) => {
                             HOSPITALIZED_PATIENTS_14_DAY_AVG: getDateValueRows(hospitals_and_icus_byRegion, 'HOSPITALIZED_PATIENTS_14_DAY_AVG'),
                             ADMITTED_PATIENTS_7_DAY_AVG: getDateValueRows(hospitals_and_icus_byRegion, 'ADMITTED_PATIENTS_7_DAY_AVG'),
                             ADMITTED_PATIENTS_14_DAY_AVG: getDateValueRows(hospitals_and_icus_byRegion, 'ADMITTED_PATIENTS_14_DAY_AVG'),
-                            ICU_PATIENTS_7_DAY_AVG: getDateValueRows(hospitals_and_icus_byRegion, 'ICU_PATIENTS_7_DAY_AVG')
+                            ICU_PATIENTS_7_DAY_AVG: getDateValueRows(hospitals_and_icus_byRegion, 'ICU_PATIENTS_7_DAY_AVG'),
                             ICU_PATIENTS_14_DAY_AVG: getDateValueRows(hospitals_and_icus_byRegion, 'ICU_PATIENTS_14_DAY_AVG')
                         }
                     }
