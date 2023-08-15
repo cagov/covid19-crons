@@ -102,20 +102,20 @@ const doCovidStateDashboardTablesHospitals = async (stagingOnly) => {
                         latest: {
                             HOSPITALIZED_PATIENTS: {
                                 TOTAL: latestData.HOSPITALIZED_PATIENTS,
-                                CHANGE: latestData.HOSPITALIZED_PATIENTS_CHANGE,
-                                CHANGE_FACTOR: latestData.HOSPITALIZED_PATIENTS_CHANGE_FACTOR,
+                                CHANGE: latestData.HOSPITALIZED_PATIENTS_WEEKLY_CHANGE,
+                                CHANGE_FACTOR: latestData.HOSPITALIZED_PATIENTS_WEEKLY_CHANGE_FACTOR,
                                 POPULATION: latestData.POPULATION
                             },
                             ADMITTED_PATIENTS: {
                                 TOTAL: latestData.ADMITTED_PATIENTS,
-                                CHANGE: latestData.ADMITTED_PATIENTS_CHANGE,
-                                CHANGE_FACTOR: latestData.ADMITTED_PATIENTS_CHANGE_FACTOR,
+                                CHANGE: latestData.ADMITTED_PATIENTS_WEEKLY_CHANGE,
+                                CHANGE_FACTOR: latestData.ADMITTED_PATIENTS_WEEKLY_CHANGE_FACTOR,
                                 POPULATION: latestData.POPULATION
                             },
                             ICU_PATIENTS: {
                                 TOTAL: latestData.ICU_PATIENTS,
-                                CHANGE: latestData.ICU_PATIENTS_CHANGE,
-                                CHANGE_FACTOR: latestData.ICU_PATIENTS_CHANGE_FACTOR,
+                                CHANGE: latestData.ICU_PATIENTS_WEEKLY_CHANGE,
+                                CHANGE_FACTOR: latestData.ICU_PATIENTS_WEEKLY_CHANGE_FACTOR,
                                 POPULATION: latestData.POPULATION
                             }
                         },
@@ -143,8 +143,8 @@ const doCovidStateDashboardTablesHospitals = async (stagingOnly) => {
                         latest: {
                             ICU_BEDS: {
                                 TOTAL: latestData.ICU_AVAILABLE_BEDS,
-                                CHANGE: latestData.ICU_AVAILABLE_BEDS_CHANGE,
-                                CHANGE_FACTOR: latestData.ICU_AVAILABLE_BEDS_CHANGE_FACTOR,
+                                CHANGE: latestData.ICU_AVAILABLE_BEDS_WEEKLY_CHANGE,
+                                CHANGE_FACTOR: latestData.ICU_AVAILABLE_BEDS_WEEKLY_CHANGE_FACTOR,
                                 POPULATION: latestData.POPULATION
                             }
                         },
