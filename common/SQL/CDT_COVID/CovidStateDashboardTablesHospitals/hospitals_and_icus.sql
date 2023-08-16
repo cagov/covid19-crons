@@ -38,7 +38,8 @@ select
     ZEROIFNULL(HOSPITALIZED_PATIENTS_CHANGE / NULLIFZERO(HOSPITALIZED_PATIENTS_PREV)) AS HOSPITALIZED_PATIENTS_CHANGE_FACTOR,
     AVG(HOSPITALIZED_PATIENTS) over (partition by REGION order by DATE rows between 6 preceding and current row) as HOSPITALIZED_PATIENTS_7_DAY_AVG,
     AVG(HOSPITALIZED_PATIENTS) over (partition by REGION order by DATE rows between 13 preceding and current row) as HOSPITALIZED_PATIENTS_14_DAY_AVG,
-    SUM(HOSPITALIZED_PATIENTS) over (partition by REGION order by DATE rows between 6 preceding and current row) - SUM(HOSPITALIZED_PATIENTS_PREV_WEEK) over (partition by REGION order by DATE rows between 6 preceding and current row) as HOSPITALIZED_PATIENTS_WEEKLY_CHANGE,
+    SUM(HOSPITALIZED_PATIENTS) over (partition by REGION order by DATE rows between 6 preceding and current row) as HOSPITALIZED_PATIENTS_WEEKLY_TOTAL
+    HOSPITALIZED_PATIENTS_WEEKLY_TOTAL - SUM(HOSPITALIZED_PATIENTS_PREV_WEEK) over (partition by REGION order by DATE rows between 6 preceding and current row) as HOSPITALIZED_PATIENTS_WEEKLY_CHANGE,
     ZEROIFNULL(HOSPITALIZED_PATIENTS_WEEKLY_CHANGE / NULLIFZERO(SUM(HOSPITALIZED_PATIENTS_PREV_WEEK) over (partition by REGION order by DATE rows between 6 preceding and current row))) AS HOSPITALIZED_PATIENTS_WEEKLY_CHANGE_FACTOR,
     
     ADMITTED_PATIENTS,
@@ -46,7 +47,8 @@ select
     ZEROIFNULL(ADMITTED_PATIENTS_CHANGE / NULLIFZERO(ADMITTED_PATIENTS_PREV)) AS ADMITTED_PATIENTS_CHANGE_FACTOR,
     AVG(ADMITTED_PATIENTS) over (partition by REGION order by DATE rows between 6 preceding and current row) as ADMITTED_PATIENTS_7_DAY_AVG,
     AVG(ADMITTED_PATIENTS) over (partition by REGION order by DATE rows between 13 preceding and current row) as ADMITTED_PATIENTS_14_DAY_AVG,
-    SUM(ADMITTED_PATIENTS) over (partition by REGION order by DATE rows between 6 preceding and current row) - SUM(ADMITTED_PATIENTS_PREV_WEEK) over (partition by REGION order by DATE rows between 6 preceding and current row) as ADMITTED_PATIENTS_WEEKLY_CHANGE,
+    SUM(ADMITTED_PATIENTS) over (partition by REGION order by DATE rows between 6 preceding and current row)  as ADMITTED_PATIENTS_WEEKLY_TOTAL,
+    ADMITTED_PATIENTS_WEEKLY_TOTAL - SUM(ADMITTED_PATIENTS_PREV_WEEK) over (partition by REGION order by DATE rows between 6 preceding and current row) as ADMITTED_PATIENTS_WEEKLY_CHANGE,
     ZEROIFNULL(ADMITTED_PATIENTS_WEEKLY_CHANGE / NULLIFZERO(SUM(ADMITTED_PATIENTS_PREV_WEEK) over (partition by REGION order by DATE rows between 6 preceding and current row))) AS ADMITTED_PATIENTS_WEEKLY_CHANGE_FACTOR,
     
     ICU_PATIENTS,
@@ -54,7 +56,8 @@ select
     ZEROIFNULL(ICU_PATIENTS_CHANGE / NULLIFZERO(ICU_PATIENTS_PREV)) AS ICU_PATIENTS_CHANGE_FACTOR,
     AVG(ICU_PATIENTS) over (partition by REGION order by DATE rows between 6 preceding and current row) as ICU_PATIENTS_7_DAY_AVG,
     AVG(ICU_PATIENTS) over (partition by REGION order by DATE rows between 13 preceding and current row) as ICU_PATIENTS_14_DAY_AVG,
-    SUM(ICU_PATIENTS) over (partition by REGION order by DATE rows between 6 preceding and current row) - SUM(ICU_PATIENTS_PREV_WEEK) over (partition by REGION order by DATE rows between 6 preceding and current row) as ICU_PATIENTS_WEEKLY_CHANGE,
+    SUM(ICU_PATIENTS) over (partition by REGION order by DATE rows between 6 preceding and current row) as ICU_PATIENTS_WEEKLY_TOTAL,
+    ICU_PATIENTS_WEEKLY_TOTAL - SUM(ICU_PATIENTS_PREV_WEEK) over (partition by REGION order by DATE rows between 6 preceding and current row) as ICU_PATIENTS_WEEKLY_CHANGE,
     ZEROIFNULL(ICU_PATIENTS_WEEKLY_CHANGE / NULLIFZERO(SUM(ICU_PATIENTS_PREV_WEEK) over (partition by REGION order by DATE rows between 6 preceding and current row))) AS ICU_PATIENTS_WEEKLY_CHANGE_FACTOR,
     
     ICU_AVAILABLE_BEDS,

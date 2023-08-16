@@ -101,19 +101,19 @@ const doCovidStateDashboardTablesHospitals = async (stagingOnly) => {
                     data: {
                         latest: {
                             HOSPITALIZED_PATIENTS: {
-                                TOTAL: latestData.HOSPITALIZED_PATIENTS,
+                                TOTAL: latestData.HOSPITALIZED_PATIENTS_WEEKLY_TOTAL,
                                 CHANGE: latestData.HOSPITALIZED_PATIENTS_WEEKLY_CHANGE,
                                 CHANGE_FACTOR: latestData.HOSPITALIZED_PATIENTS_WEEKLY_CHANGE_FACTOR,
                                 POPULATION: latestData.POPULATION
                             },
                             ADMITTED_PATIENTS: {
-                                TOTAL: latestData.ADMITTED_PATIENTS,
+                                TOTAL: latestData.ADMITTED_PATIENTS_WEEKLY_TOTAL,
                                 CHANGE: latestData.ADMITTED_PATIENTS_WEEKLY_CHANGE,
                                 CHANGE_FACTOR: latestData.ADMITTED_PATIENTS_WEEKLY_CHANGE_FACTOR,
                                 POPULATION: latestData.POPULATION
                             },
                             ICU_PATIENTS: {
-                                TOTAL: latestData.ICU_PATIENTS,
+                                TOTAL: latestData.ICU_PATIENTS_WEEKLY_TOTAL,
                                 CHANGE: latestData.ICU_PATIENTS_WEEKLY_CHANGE,
                                 CHANGE_FACTOR: latestData.ICU_PATIENTS_WEEKLY_CHANGE_FACTOR,
                                 POPULATION: latestData.POPULATION
