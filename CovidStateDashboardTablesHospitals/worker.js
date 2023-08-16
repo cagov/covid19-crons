@@ -101,9 +101,11 @@ const doCovidStateDashboardTablesHospitals = async (stagingOnly) => {
                     data: {
                         latest: {
                             HOSPITALIZED_PATIENTS: {
-                                TOTAL: latestData.HOSPITALIZED_PATIENTS_WEEKLY_TOTAL,
-                                CHANGE: latestData.HOSPITALIZED_PATIENTS_WEEKLY_CHANGE,
-                                CHANGE_FACTOR: latestData.HOSPITALIZED_PATIENTS_WEEKLY_CHANGE_FACTOR,
+                                // Don't use *weekly* total for hospitalizations since summing
+                                // concurrent hospitalizations does not yield useful numbers.
+                                TOTAL: latestData.HOSPITALIZED_PATIENTS,
+                                CHANGE: latestData.HOSPITALIZED_PATIENTS_CHANGE,
+                                CHANGE_FACTOR: latestData.HOSPITALIZED_PATIENTS_CHANGE_FACTOR,
                                 POPULATION: latestData.POPULATION
                             },
                             ADMITTED_PATIENTS: {
