@@ -145,8 +145,8 @@ const doCovidStateDashboardTablesHospitals = async (stagingOnly) => {
                         latest: {
                             ICU_BEDS: {
                                 TOTAL: latestData.ICU_AVAILABLE_BEDS,
-                                CHANGE: latestData.ICU_AVAILABLE_BEDS_WEEKLY_CHANGE,
-                                CHANGE_FACTOR: latestData.ICU_AVAILABLE_BEDS_WEEKLY_CHANGE_FACTOR,
+                                CHANGE: latestData.ICU_AVAILABLE_BEDS_CHANGE,
+                                CHANGE_FACTOR: latestData.ICU_AVAILABLE_BEDS_CHANGE_FACTOR,
                                 POPULATION: latestData.POPULATION
                             }
                         },
