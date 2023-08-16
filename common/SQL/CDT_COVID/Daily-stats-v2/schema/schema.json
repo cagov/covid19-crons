@@ -180,6 +180,9 @@
             "HOSPITALIZED_COVID_CONFIRMED_PATIENTS_LAST7DAYS",
             "HOSPITALIZED_COVID_CONFIRMED_PATIENTS_LAST14DAYS",
             "HOSPITALIZED_COVID_CONFIRMED_PATIENTS_7_DAY_AVG",
+            "HOSPITALIZED_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL",
+            "HOSPITALIZED_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL_CHANGE",
+            "HOSPITALIZED_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL_CHANGE_FACTOR",
             "HOSPITALIZED_COVID_CONFIRMED_PATIENTS_PER_100K",
             "ADMITTED_COVID_CONFIRMED_PATIENTS",
             "ADMITTED_COVID_CONFIRMED_PATIENTS_DAILY",
@@ -187,6 +190,9 @@
             "ADMITTED_COVID_CONFIRMED_PATIENTS_LAST7DAYS",
             "ADMITTED_COVID_CONFIRMED_PATIENTS_LAST14DAYS",
             "ADMITTED_COVID_CONFIRMED_PATIENTS_7_DAY_AVG",
+            "ADMITTED_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL",
+            "ADMITTED_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL_CHANGE",
+            "ADMITTED_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL_CHANGE_FACTOR",
             "ADMITTED_COVID_CONFIRMED_PATIENTS_PER_100K",
             "HOSPITALIZED_SUSPECTED_COVID_PATIENTS",
             "HOSPITALIZED_SUSPECTED_COVID_PATIENTS_DAILY",
@@ -219,6 +225,15 @@
             "HOSPITALIZED_COVID_CONFIRMED_PATIENTS_7_DAY_AVG":{
               "$ref": "#/definitions/integer-zero-to-everyone"
             },
+            "HOSPITALIZED_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL": {
+              "type":"integer"
+            },
+            "HOSPITALIZED_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL_CHANGE": {
+              "type":"integer"
+            },
+            "HOSPITALIZED_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL_CHANGE_FACTOR": {
+              "type":"number"
+            },
             "HOSPITALIZED_COVID_CONFIRMED_PATIENTS_PER_100K":{
               "type":"number",
               "minimum": 0,
@@ -241,6 +256,15 @@
             },
             "ADMITTED_COVID_CONFIRMED_PATIENTS_7_DAY_AVG":{
               "$ref": "#/definitions/integer-zero-to-everyone"
+            },
+            "ADMITTED_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL": {
+              "type":"integer"
+            },
+            "ADMITTED_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL_CHANGE": {
+              "type":"integer"
+            },
+            "ADMITTED_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL_CHANGE_FACTOR": {
+              "type":"number"
             },
             "ADMITTED_COVID_CONFIRMED_PATIENTS_PER_100K":{
               "type":"number",
@@ -280,6 +304,9 @@
             "ICU_COVID_CONFIRMED_PATIENTS_DAILYPCTCHG",
             "ICU_COVID_CONFIRMED_PATIENTS_LAST7DAYS",
             "ICU_COVID_CONFIRMED_PATIENTS_LAST14DAYS",
+            "ICU_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL",
+            "ICU_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL_CHANGE",
+            "ICU_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL_CHANGE_FACTOR",
             "ICU_SUSPECTED_COVID_PATIENTS",
             "ICU_SUSPECTED_COVID_PATIENTS_DAILY",
             "ICU_SUSPECTED_COVID_PATIENTS_DAILYPCTCHG",
@@ -305,6 +332,15 @@
             },
             "ICU_COVID_CONFIRMED_PATIENTS_LAST14DAYS":{
               "type":"integer"
+            },
+            "ICU_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL": {
+              "type":"integer"
+            },
+            "ICU_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL_CHANGE": {
+              "type":"integer"
+            },
+            "ICU_COVID_CONFIRMED_PATIENTS_7_DAY_TOTAL_CHANGE_FACTOR": {
+              "type":"number"
             },
             "ICU_SUSPECTED_COVID_PATIENTS":{
               "type":"integer"
