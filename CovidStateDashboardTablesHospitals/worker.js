@@ -106,6 +106,14 @@ const doCovidStateDashboardTablesHospitals = async (stagingOnly) => {
                                 CHANGE_FACTOR: latestData.HOSPITALIZED_PATIENTS_CHANGE_FACTOR,
                                 POPULATION: latestData.POPULATION
                             },
+                            ADMITTED_PATIENTS: {
+                                // Use *weekly* total for admissions since summing admissions
+                                // makes sense and CDPH wants to see totals.
+                                TOTAL: latestData.ADMITTED_PATIENTS_WEEKLY_TOTAL,
+                                CHANGE: latestData.ADMITTED_PATIENTS_WEEKLY_CHANGE,
+                                CHANGE_FACTOR: latestData.ADMITTED_PATIENTS_WEEKLY_CHANGE_FACTOR,
+                                POPULATION: latestData.POPULATION
+                            },
                             ICU_PATIENTS: {
                                 TOTAL: latestData.ICU_PATIENTS,
                                 CHANGE: latestData.ICU_PATIENTS_CHANGE,
@@ -115,8 +123,13 @@ const doCovidStateDashboardTablesHospitals = async (stagingOnly) => {
                         },
                         time_series: {
                             HOSPITALIZED_PATIENTS: getDateValueRows(hospitals_and_icus_byRegion, 'HOSPITALIZED_PATIENTS'),
+                            ADMITTED_PATIENTS: getDateValueRows(hospitals_and_icus_byRegion, 'ADMITTED_PATIENTS'),
                             ICU_PATIENTS: getDateValueRows(hospitals_and_icus_byRegion, 'ICU_PATIENTS'),
+                            HOSPITALIZED_PATIENTS_7_DAY_AVG: getDateValueRows(hospitals_and_icus_byRegion, 'HOSPITALIZED_PATIENTS_7_DAY_AVG'),
                             HOSPITALIZED_PATIENTS_14_DAY_AVG: getDateValueRows(hospitals_and_icus_byRegion, 'HOSPITALIZED_PATIENTS_14_DAY_AVG'),
+                            ADMITTED_PATIENTS_7_DAY_AVG: getDateValueRows(hospitals_and_icus_byRegion, 'ADMITTED_PATIENTS_7_DAY_AVG'),
+                            ADMITTED_PATIENTS_14_DAY_AVG: getDateValueRows(hospitals_and_icus_byRegion, 'ADMITTED_PATIENTS_14_DAY_AVG'),
+                            ICU_PATIENTS_7_DAY_AVG: getDateValueRows(hospitals_and_icus_byRegion, 'ICU_PATIENTS_7_DAY_AVG'),
                             ICU_PATIENTS_14_DAY_AVG: getDateValueRows(hospitals_and_icus_byRegion, 'ICU_PATIENTS_14_DAY_AVG')
                         }
                     }
