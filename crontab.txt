@@ -3,8 +3,8 @@
 # this is local only email
 MAILTO=ubuntu@covid19-utility-server
 
-# run CovidDataAutoDeployment every 5 minutes, 7-10am, Thursday
-0,5,10,15,20,25,30,35,40,45,50,55 7-10 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidDataAutoDeployment
+# run CovidDataAutoDeployment every 5 minutes, 7-10am, Friday
+0,5,10,15,20,25,30,35,40,45,50,55 7-10 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidDataAutoDeployment
 
 # run CovidTranslationPrApproval at 6am, 12pm, 6pm, Mon-Fri
 0 6,12,18 * * 1-5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidTranslationPrApproval
@@ -17,30 +17,24 @@ MAILTO=ubuntu@covid19-utility-server
 # 8:10am on Monday
 #10 8 * * 1 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpactPreview
 
-# WEDNESDAY
-30 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTestsPreview
-35 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesHospitalsPreview
-40 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesCasesDeathsPreview
-45 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardSummaryPreview
-
 # THURSDAY
-# 7:10a on Thursday
-10 7 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesCasesDeaths
 
-# 7:20a on Thursday
-20 7 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesHospitals
+# 3:30 pm
+30 15 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTestsPreview
+35 15 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesHospitalsPreview
+40 15 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesCasesDeathsPreview
+45 15 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardSummaryPreview
 
-# 7:30a on Thursday
-30 7 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTests
+# FRIDAY
 
-# 7:45a on Thursday
-45 7 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardSummary
-
-# 7:55a on Thursday
-#55 7 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpact
-
-# 9:25a, 9:55a on Thursday
-25,55 9 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidAutoBuilder
+# 7:10am
+10 7 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesCasesDeaths
+20 7 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesHospitals
+30 7 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTests
+40 7 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardSummary
+#50 7 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpact
+# 9:25a, 9:55a
+25,55 9 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidAutoBuilder
 
 
 # TEST (Wednesday)
