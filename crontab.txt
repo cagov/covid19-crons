@@ -17,17 +17,31 @@ MAILTO=ubuntu@covid19-utility-server
 # 8:10am on Monday
 #10 8 * * 1 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpactPreview
 
+#
+# WEDNESDAY
+#
+
+# 3:30 pm preview
+30 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTestsPreview
+35 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesHospitalsPreview
+40 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesCasesDeathsPreview
+45 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardSummaryPreview
+
+#
 # THURSDAY
+#
 
-# 3:30 pm
-30 15 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTestsPreview
-35 15 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesHospitalsPreview
-40 15 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesCasesDeathsPreview
-45 15 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardSummaryPreview
+# 8:05 am preview
+05 8 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTestsPreview
+15 8 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesHospitalsPreview
+25 8 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesCasesDeathsPreview
+35 8 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardSummaryPreview
 
+#
 # FRIDAY
+#
 
-# 7:10am
+# 7:10 am
 10 7 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesCasesDeaths
 20 7 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesHospitals
 30 7 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTests
