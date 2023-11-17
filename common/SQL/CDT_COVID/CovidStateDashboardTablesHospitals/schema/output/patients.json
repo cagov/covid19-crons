@@ -204,7 +204,7 @@
                   "type": "array",
                   "uniqueItems": true,
                   "minItems": 300,
-                  "maxItems": 1200,
+                  "maxItems": 1500,
                   "items": {
                     "required": true,
                     "type": "object",
@@ -249,7 +249,7 @@
                   "type": "array",
                   "uniqueItems": true,
                   "minItems": 300,
-                  "maxItems": 1200,
+                  "maxItems": 1500,
                   "items": {
                     "required": true,
                     "type": "object",
@@ -294,7 +294,7 @@
                   "type": "array",
                   "uniqueItems": true,
                   "minItems": 300,
-                  "maxItems": 1200,
+                  "maxItems": 1500,
                   "items": {
                     "required": true,
                     "type": "object",
@@ -339,7 +339,7 @@
                   "type": "array",
                   "uniqueItems": true,
                   "minItems": 300,
-                  "maxItems": 1200,
+                  "maxItems": 1500,
                   "items": {
                     "required": true,
                     "type": "object",
@@ -384,7 +384,7 @@
                   "type": "array",
                   "uniqueItems": true,
                   "minItems": 300,
-                  "maxItems": 1200,
+                  "maxItems": 1500,
                   "items": {
                     "required": true,
                     "type": "object",
@@ -429,7 +429,7 @@
                   "type": "array",
                   "uniqueItems": true,
                   "minItems": 300,
-                  "maxItems": 1200,
+                  "maxItems": 1500,
                   "items": {
                     "required": true,
                     "type": "object",
@@ -474,7 +474,7 @@
                   "type": "array",
                   "uniqueItems": true,
                   "minItems": 300,
-                  "maxItems": 1200,
+                  "maxItems": 1500,
                   "items": {
                     "required": true,
                     "type": "object",
@@ -519,7 +519,7 @@
                   "type": "array",
                   "uniqueItems": true,
                   "minItems": 300,
-                  "maxItems": 1200,
+                  "maxItems": 1500,
                   "items": {
                     "required": true,
                     "type": "object",
@@ -564,7 +564,7 @@
                   "type": "array",
                   "uniqueItems": true,
                   "minItems": 300,
-                  "maxItems": 1200,
+                  "maxItems": 1500,
                   "items": {
                     "required": true,
                     "type": "object",
