@@ -12,9 +12,9 @@ const cron_holidays = [
             '2022-09-05', // labor day
             '2022-09-06', // Tuesday after labor day
             '2022-11-11', // veterans day
-            '2022-11-24', // thanksgiving
-            '2022-11-25', // day after thanksgiving
-            '2022-12-25', // christmas
+            '2023-11-22', // thanksgiving (preview)
+            '2023-11-23', // thanksgiving (preview)
+            '2023-11-24', // thanksgiving (refresh)
             ]
 
 const isIdleDay = ({weekends_off = true, holidays_off = true, first_week_only = false, day_delta = 0}) => {
