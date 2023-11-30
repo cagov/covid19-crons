@@ -42,13 +42,13 @@ MAILTO=ubuntu@covid19-utility-server
 #
 
 # 7:10 am
-10 7 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesCasesDeaths
-20 7 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesHospitals
-30 7 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTests
-40 7 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardSummary
+#10 7 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesCasesDeaths
+#20 7 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesHospitals
+#30 7 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTests
+#40 7 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardSummary
 #50 7 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpact
 # 9:25a, 9:55a
-25,55 9 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidAutoBuilder
+#25,55 9 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidAutoBuilder
 
 
 # TEST (Wednesday)
