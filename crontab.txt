@@ -4,38 +4,30 @@
 MAILTO=ubuntu@covid19-utility-server
 
 # run CovidDataAutoDeployment every 5 minutes, 7-10am, Friday
-0,5,10,15,20,25,30,35,40,45,50,55 7-10 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidDataAutoDeployment
+#0,5,10,15,20,25,30,35,40,45,50,55 7-10 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidDataAutoDeployment
 
 # run CovidTranslationPrApproval at 6am, 12pm, 6pm, Mon-Fri
 0 6,12,18 * * 1-5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidTranslationPrApproval
-
-
-# MONDAY
-# 8:00am on Monday
-#0 8 * * 1 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityData
-
-# 8:10am on Monday
-#10 8 * * 1 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidEquityImpactPreview
 
 #
 # WEDNESDAY
 #
 
 # 3:30 pm preview
-30 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTestsPreview
-35 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesHospitalsPreview
-40 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesCasesDeathsPreview
-45 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardSummaryPreview
+#30 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTestsPreview
+#35 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesHospitalsPreview
+#40 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesCasesDeathsPreview
+#45 15 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardSummaryPreview
 
 #
 # THURSDAY
 #
 
 # 8:05 am preview
-05 8 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTestsPreview
-15 8 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesHospitalsPreview
-25 8 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesCasesDeathsPreview
-35 8 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardSummaryPreview
+#05 8 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesTestsPreview
+#15 8 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesHospitalsPreview
+#25 8 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardTablesCasesDeathsPreview
+#35 8 * * 4 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidStateDashboardSummaryPreview
 
 #
 # FRIDAY
@@ -51,6 +43,3 @@ MAILTO=ubuntu@covid19-utility-server
 #25,55 9 * * 5 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidAutoBuilder
 
 
-# TEST (Wednesday)
-# 40,45,50,55 14,15,16 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidTestTrigger
-# 0,5,10 23 * * 3 /home/ubuntu/Development/covid19-crons/run_cron.sh CovidTestTrigger
